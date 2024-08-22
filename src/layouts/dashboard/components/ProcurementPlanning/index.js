@@ -83,12 +83,6 @@ function ProcurementPlanning() {
                   </SoftTypography>
                 </SoftTypography>
               </SoftBox>
-              <SoftTypography
-                variant="button"
-                color="text"
-                fontWeight="medium"
-              >
-              </SoftTypography>
             </SoftBox>
           </Grid>
         </Grid>
