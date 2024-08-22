@@ -76,12 +76,6 @@ function SalesPlanning() {
                   Anticipate what your customer want view
                 </SoftTypography>
               </SoftBox>
-              <SoftTypography
-                variant="button"
-                color="text"
-                fontWeight="medium"
-              >
-              </SoftTypography>
             </SoftBox>
           </Grid>
         </Grid>
