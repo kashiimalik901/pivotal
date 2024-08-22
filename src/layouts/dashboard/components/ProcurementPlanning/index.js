@@ -57,8 +57,6 @@ function ProcurementPlanning() {
               }}
             >
               <SoftBox
-               component="a"
-                href="#"
                 display="block"
                 position="absolute"
                 left={0}
@@ -69,7 +67,7 @@ function ProcurementPlanning() {
             </SoftBox>
           </Grid>
           <Grid item xs={12} lg={6}>
-            <SoftBox display="flex" flexDirection="column" height="100%" component="a" href="#">
+            <SoftBox display="flex" flexDirection="column" height="100%"  >
               <SoftTypography variant="h5" fontWeight="bold" gutterBottom>
               Procurement planning
               </SoftTypography>
@@ -86,8 +84,6 @@ function ProcurementPlanning() {
                 </SoftTypography>
               </SoftBox>
               <SoftTypography
-                component="a"
-                href="#"
                 variant="button"
                 color="text"
                 fontWeight="medium"
