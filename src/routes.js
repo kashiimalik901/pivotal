@@ -67,7 +67,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Master Date",
+    name: "Master Data",
     key: "tables",
     route: "/tables",
     icon: <Office size="12px" />,
