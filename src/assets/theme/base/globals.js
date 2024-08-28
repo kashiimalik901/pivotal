@@ -36,6 +36,12 @@ const globals = {
   "a.link:hover, .link:hover, a.link:focus, .link:focus": {
     color: `${info.main} !important`,
   },
+  ".flatfile_iframe-wrapper.flatfile_displayAsModal": {
+    position: 'relative !important',
+    width: '100% !important',
+    height: '100% !important',
+    padding: '0 !important',
+  }
 };
 
 export default globals;

@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Soft UI Dashboard React - v4.0.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Card from "@mui/material/Card";
 
@@ -32,6 +17,21 @@ import authorsTableData from "layouts/tables/data/authorsTableData";
 import projectsTableData from "layouts/tables/data/projectsTableData";
 import ProductTableData from "layouts/tables/data/productTableData";
 
+// FlatFile
+import { useFlatfile, FlatfileProvider, Sheet } from "@flatfile/react";
+import { blueprint } from "blueprint";
+import { useEffect } from "react";
+
+const FlatfilePortal = () => {
+  const { openPortal } = useFlatfile();
+
+  useEffect(() => {
+    openPortal();
+  }, [openPortal]);
+
+  return <Sheet config={blueprint} />;
+};
+
 function Tables() {
   const { columns, rows } = authorsTableData;
   const { columns: prCols, rows: prRows } = projectsTableData;
@@ -40,7 +40,9 @@ function Tables() {
     <DashboardLayout>
       <DashboardNavbar />
       <Navbar />
-      <ProductTableData />
+      <FlatfileProvider publishableKey="pk_f0a1f46b01814c0183c8a1f1405fcb91">
+        <FlatfilePortal />
+      </FlatfileProvider>
       <Footer />
     </DashboardLayout>
   );
