@@ -75,6 +75,13 @@ const routes = [
     noCollapse: true,
   },
   {
+    name: "Master Data",
+    key: "tables",
+    route: "/tables/products",
+    icon: <Office size="12px" />,
+    component: <Tables />,
+  },
+  {
     type: "collapse",
     name: "Sales Data",
     key: "billing",

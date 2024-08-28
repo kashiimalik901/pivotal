@@ -41,7 +41,10 @@ const globals = {
     width: '100% !important',
     height: '100% !important',
     padding: '0 !important',
-  }
+  },
+  ".flatfile-close-button": {
+    display: "none",
+}
 };
 
 export default globals;

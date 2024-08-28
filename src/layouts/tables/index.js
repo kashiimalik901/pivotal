@@ -19,7 +19,7 @@ import ProductTableData from "layouts/tables/data/productTableData";
 
 // FlatFile
 import { useFlatfile, FlatfileProvider, Sheet } from "@flatfile/react";
-import { blueprint } from "blueprint";
+import { blueprints } from "blueprints";
 import { useEffect } from "react";
 
 const FlatfilePortal = () => {
@@ -29,7 +29,13 @@ const FlatfilePortal = () => {
     openPortal();
   }, [openPortal]);
 
-  return <Sheet config={blueprint} />;
+  return (
+    <div>
+      {blueprints.map((blueprint) => (
+        <Sheet key={blueprint.slug} config={blueprint} />
+      ))}
+    </div>
+  )
 };
 
 function Tables() {
@@ -39,7 +45,6 @@ function Tables() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <Navbar />
       <FlatfileProvider publishableKey="pk_f0a1f46b01814c0183c8a1f1405fcb91">
         <FlatfilePortal />
       </FlatfileProvider>
